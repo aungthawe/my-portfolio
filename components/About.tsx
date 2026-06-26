@@ -16,7 +16,7 @@ export default function About() {
           transition={{ duration: 0.4 ,delay: 0.15}}
           className="rounded-2xl border border-gray-100 bg-white/20 backdrop-blur-sm border-white/10 p-8 shadow-md hover:shadow-lg transition-shadow duration-200 hover:-translate-y-2 transform duration-400 transition-transform"
         >
-          <h2 className="mb-8 text-3xl font-bold text-gray-700">About Me</h2>
+          <h2 className="mb-8 text-2xl font-bold text-gray-700">About Me</h2>
           <p className="text-lg leading-relaxed text-gray-600">
             I`m Aung Thawe Thit Oo—a tech enthusiast, certified IT Engineer, and
             JLPT N3/N4 language learner. I build software because I love

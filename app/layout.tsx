@@ -6,9 +6,6 @@ import { GlobalBigBall } from "@/components/GlobalFloatingBall";
 import CustomCursor from "@/components/CustomCursor";
 
 export const metadata: Metadata = {
-  icons: {
-    icon: "/favicon.png",
-  },
   title: "Aung Thawe - Portfolio",
   description:
     "Aung Thawe Thit Oo's personal portfolio website showcasing projects, skills, and contact information.",
@@ -21,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body >
+      <body>
         <CustomCursor />
         <GlobalBigBall />
 
