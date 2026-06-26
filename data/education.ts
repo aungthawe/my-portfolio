@@ -1,4 +1,3 @@
-// src/data/education.ts
 
 export interface EducationItem {
   id: string;

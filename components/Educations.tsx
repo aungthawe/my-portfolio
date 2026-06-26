@@ -13,7 +13,7 @@ export default function Education() {
       case "language":
         return "bg-blue-500/10 text-blue-700 border-blue-500/20";
       default:
-        return "bg-gray-500/10 text-gray-700 border-gray-500/20";
+        return "bg-yellow-500/10 text-gray-700 border-yellow-500/20";
     }
   };
 

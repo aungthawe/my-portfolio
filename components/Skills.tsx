@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, TargetAndTransition } from "framer-motion";
 
 type Skill = {
   name: string;
@@ -202,9 +202,18 @@ const categories: Category[] = [
   },
 ];
 
+// const barVariants = {
+//   hidden: { width: 0 },
+//   show: (p: number) => ({
+//     width: `${p}%`,
+//     transition: { duration: 2.0, ease: "easeOut" },
+//   }),
+// };
+
 const barVariants = {
   hidden: { width: 0 },
-  show: (p: number) => ({
+  // Explicitly typing the return value of the function fixes the assignment error
+  show: (p: number): TargetAndTransition => ({
     width: `${p}%`,
     transition: { duration: 2.0, ease: "easeOut" },
   }),

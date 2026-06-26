@@ -56,7 +56,7 @@ export default function Projects() {
                     {project.tech.map((t) => (
                       <span
                         key={t}
-                        className="text-xs bg-white/30 backdrop-blur-md border text-blue-700 px-2 py-1 rounded-md"
+                        className="text-xs bg-blue-500/10 backdrop-blur-md border border-blue-500/20 text-blue-700 px-2 py-1 rounded-full shadow-sm"
                       >
                         {t}
                       </span>
@@ -70,7 +70,7 @@ export default function Projects() {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-purple-900 hover:text-purple-700 p-2 hover:bg-black/10 rounded-xl transition-colors duration-200"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-purple-900 hover:text-purple-700 p-2 hover:bg-black/10 rounded-full transition-colors duration-200"
                   >
                     View Project{" "}
                     <svg
