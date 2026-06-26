@@ -172,44 +172,35 @@ const categories: Category[] = [
     skills: [
       { name: "HTML", percent: 80, icon: <Icon name="html" /> },
       { name: "CSS / Tailwind", percent: 85, icon: <Icon name="css" /> },
-      { name: "JavaScript", percent: 75, icon: <Icon name="javascript" /> },
-      { name: "TypeScript", percent: 70, icon: <Icon name="typescript" /> },
-      { name: "React", percent: 70, icon: <Icon name="react" /> },
+      { name: "JavaScript", percent: 65, icon: <Icon name="javascript" /> },
+      { name: "TypeScript", percent: 60, icon: <Icon name="typescript" /> },
+      { name: "React", percent: 65, icon: <Icon name="react" /> },
     ],
   },
   {
     title: "Backend",
     skills: [
-      { name: "Java", percent: 75, icon: <Icon name="java" /> },
-      { name: "Spring Boot", percent: 65, icon: <Icon name="spring" /> },
-      { name: "C#", percent: 60, icon: <Icon name="csharp" /> },
-      { name: "OData", percent: 55, icon: <Icon name="odata" /> },
+      { name: "Java", percent: 65, icon: <Icon name="java" /> },
+      { name: "Spring Boot", percent: 55, icon: <Icon name="spring" /> },
+      { name: "C#", percent: 40, icon: <Icon name="csharp" /> },
+      { name: "OData", percent: 35, icon: <Icon name="odata" /> },
     ],
   },
   {
     title: "Database ",
     skills: [
       { name: "SQL", percent: 70, icon: <Icon name="sql" /> },
-      { name: "Firebase", percent: 60, icon: <Icon name="firebase" /> },
+      { name: "Firebase", percent: 40, icon: <Icon name="firebase" /> },
     ],
   },
   {
     title: "Others",
     skills: [
-      { name: "C++", percent: 50, icon: <Icon name="c++" /> },
-      { name: "Blazor", percent: 50, icon: <Icon name="blazor" /> },
+      { name: "C++", percent: 40, icon: <Icon name="c++" /> },
+      { name: "Blazor", percent: 30, icon: <Icon name="blazor" /> },
     ],
   },
 ];
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 18 },
-  show: (i = 1) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.3, ease: "easeOut" },
-  }),
-};
 
 const barVariants = {
   hidden: { width: 0 },
@@ -241,18 +232,18 @@ export default function Skills() {
             <motion.div
               key={cat.title}
               className="group rounded-2xl bg-white/5 backdrop-blur-md border-white/10 hover:border-gray-300 transition-border p-5 shadow-sm hover:shadow-md transition-shadow duration-200 hover:-translate-y-2 transform duration-400 transition-transform"
-              initial="hidden"
-              whileInView="show"
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, amount: 0.45 }}
+              transition={{ duration: 0.4, delay: idx * 0.15 }}
               custom={idx}
-              variants={cardVariants}
             >
               <h3 className="mb-4 text-lg font-semibold text-gray-700">
                 {cat.title}
               </h3>
 
               <div className="space-y-4">
-                {cat.skills.map((s, i) => (
+                {cat.skills.map((s) => (
                   <div key={s.name}>
                     {/* label + icon */}
                     <div className="flex items-center justify-between">

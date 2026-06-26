@@ -13,7 +13,14 @@ const Navbar: React.FC = () => {
     }
   };
 
-  const menuItems = ["home", "about", "skills", "projects", "contact"];
+  const menuItems = [
+    "home",
+    "about",
+    "education",
+    "skills",
+    "projects",
+    "contact",
+  ];
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white/5 backdrop-blur-md border-b border-white/10 shadow-sm z-50">
