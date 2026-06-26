@@ -49,7 +49,7 @@ export default function Contact() {
 
         <motion.form
           onSubmit={handleSubmit}
-          className="rounded-2xl bg-white/5 backdrop-blur-md border-white/10 p-8 shadow-sm  hover:shadow-md transition-shadow duration-200 hover:-translate-y-2 transform duration-400 transition-transform"
+          className="rounded-2xl bg-white/5 backdrop-blur-lg border-white/10 p-8 shadow-sm  hover:shadow-lg transition-shadow duration-200 hover:-translate-y-2 transform duration-400 transition-transform"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2 }}

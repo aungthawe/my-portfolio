@@ -85,7 +85,7 @@ export default function Hero2() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="cursor-pointer bg-white/30 backdrop-blur-md ring ring-1 ring-white/10 text-black rounded-full px-6 py-3 text-sm font-medium shadow-sm"
+              className="cursor-pointer bg-white/30 backdrop-blur-md ring ring-1 ring-white/10 text-black rounded-full px-6 py-3 text-sm font-medium shadow-sm transition-colors duration-400 hover:bg-gray-900 hover:text-white transition-all"
               onClick={() => handleScroll("contact")}
             >
               Contact Me
@@ -95,7 +95,7 @@ export default function Hero2() {
               whileTap={{ scale: 0.95 }}
               href="/resume.pdf" // Direct reference to your root public folder file
               download="Aung_Thawe_Thit_Oo_Resume.pdf" // Sets the exact filename when downloaded
-              className="cursor-pointer bg-white/30 backdrop-blur-md ring ring-1 ring-white/10 text-black rounded-full px-6 py-3 text-sm font-medium shadow-sm flex items-center gap-2"
+              className="cursor-pointer bg-white/30 backdrop-blur-md ring ring-1 ring-white/10 text-black rounded-full px-6 py-3 text-sm font-medium shadow-sm flex items-center gap-2 transition-colors duration-400 hover:bg-gray-900 hover:text-white transition-all"
             >
               <Download size={16} />
               Download Resume
