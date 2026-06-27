@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: "Aung Thawe | Academic Portfolio & Achievements",
   description:
     "The official academic and personal portfolio of Aung Thawe Thit Oo. Showcasing educational milestones, some experience, GELC achievements, and professional certifications.",
+  verification: {
+    google: "Z1blSm-rz6A8mT-XWAVtSERD8xLPbiCD4RCd9lmwNtA",
+  },
   keywords: [
     "Aung Thawe Thit Oo",
     "Aung Thawe",
@@ -42,7 +45,7 @@ export const metadata: Metadata = {
       },
     ],
     locale: "en_US",
-    type: "profile", 
+    type: "profile",
   },
   twitter: {
     card: "summary_large_image",
