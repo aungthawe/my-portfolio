@@ -5,13 +5,25 @@ import { motion } from "framer-motion";
 
 export default function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  
-  const [hovered, setHorverd] = useState(false);
+  const [hovered, setHovered] = useState(false);
+  // Add a state to conditionally render the cursor on desktop only
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    // 1. Check if it's a mobile/touch device or narrow viewport
+    const isTouchDevice =
+      "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    const isMobileViewport = window.innerWidth < 768;
+
+    // If it's mobile, stop execution immediately and do not listen to events
+    if (isTouchDevice || isMobileViewport) {
+      return;
+    }
+
     const move = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
+
     window.addEventListener("mousemove", move);
     return () => {
       window.removeEventListener("mousemove", move);
@@ -19,13 +31,16 @@ export default function CustomCursor() {
   }, []);
 
   useEffect(() => {
+    // Break out of the second listener hook if we're hidden (on mobile)
+    if (!isVisible) return;
+
     const interactiveElements = Array.from(
       document.querySelectorAll(
         "a, button, .interactive, input, textarea, select, label",
       ),
     );
-    const addHover = () => setHorverd(true);
-    const removeHover = () => setHorverd(false);
+    const addHover = () => setHovered(true);
+    const removeHover = () => setHovered(false);
 
     interactiveElements.forEach((el) => {
       el.addEventListener("mouseenter", addHover);
@@ -38,10 +53,14 @@ export default function CustomCursor() {
         el.removeEventListener("mouseleave", removeHover);
       });
     };
-  }, []);
+  }, [isVisible]); // Triggers cleanly once visibility is computed
+
+  // Render absolutely nothing if on a mobile or tablet screen
+  if (!isVisible) return null;
 
   return (
     <>
+      {/* Core Dot */}
       <motion.div
         animate={{ x: position.x - 4, y: position.y - 4 }}
         transition={{ type: "spring", stiffness: 500, damping: 28 }}

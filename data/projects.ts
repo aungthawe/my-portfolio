@@ -18,8 +18,6 @@ export interface ProjectItem {
 }
 
 export const projectsData: ProjectItem[] = [
-
-
   {
     title: "My Portfolio",
     description:
@@ -31,23 +29,15 @@ export const projectsData: ProjectItem[] = [
   {
     title: "MapLibre Navigation",
     description:
-      "High-performance vector mapping and turnkey routing system built using Next.js and MapLibre GL. Optimizes device battery footprints and UI rendering loops during geo-coordinate shifts.",
+      "mapping and turnkey routing system built using Next.js and MapLibre GL.",
     tech: ["Next.js", "TypeScript", "MapLibre GL", "Turf.js"],
     githubUrl: "https://github.com/aungthawe/maplibre-navigation",
     iconName: "Navigation",
   },
-  {
-    title: "SignalR Geo API",
-    description:
-      "Robust enterprise backend microservice developed in C# to establish stable full-duplex WebSocket streaming tunnels. Efficiently broadcasts geospatial datasets down to connected UI nodes.",
-    tech: ["C#", ".NET Core", "SignalR", "WebSockets"],
-    githubUrl: "https://github.com/aungthawe/signalr_api",
-    iconName: "Activity",
-  },
+
   {
     title: "Live Map Streaming",
-    description:
-      "Geospatial tracking interface consuming low-latency stream sockets from a SignalR broker layer. Dynamically updates map markers, client trajectories, and location changes in true realtime.",
+    description: " tracking  location changes in true realtime.",
     tech: ["TypeScript", "React", "SignalR Client", "Maps API"],
     githubUrl: "https://github.com/aungthawe/map_with_signalr",
     iconName: "Map",
@@ -63,7 +53,7 @@ export const projectsData: ProjectItem[] = [
   {
     title: "Socket.io Mini Chat",
     description:
-      "Asynchronous event-driven messaging layer constructed using Node.js, Socket.io, and Next.js. Manages socket rooms, active reconnection handling, and instant text transport layers.",
+      "Asynchronous event-driven messaging layer constructed using Node.js, Socket.io, and Next.js. Manages socket rooms and instant text transport layers.",
     tech: ["JavaScript", "Node.js", "Socket.io", "Next.js"],
     githubUrl: "https://github.com/aungthawe/chat_socket",
     iconName: "MessageCircle",
@@ -71,7 +61,7 @@ export const projectsData: ProjectItem[] = [
   {
     title: "Shop Management Dashboard",
     description:
-      "Advanced data grid application optimizing high-frequency API manipulation via OData structures. Integrates robust caching layers, atomic mutation tracking, and pristine layout styling.",
+      "Advanced data grid application optimizing high-frequency API manipulation via OData structures.",
     tech: ["TypeScript", "React", "TanStack Query", "OData", "Shadcn UI"],
     githubUrl: "https://github.com/aungthawe/shop-dashboard",
     iconName: "Hotel",
