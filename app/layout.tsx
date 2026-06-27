@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Aung Thawe Thit Oo | Academic Portfolio & Achievements",
+  title: "Aung Thawe | Academic Portfolio & Achievements",
   description:
     "The official academic and personal portfolio of Aung Thawe Thit Oo. Showcasing educational milestones, some experience, GELC achievements, and professional certifications.",
   keywords: [
